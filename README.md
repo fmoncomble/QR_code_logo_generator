@@ -13,3 +13,5 @@ This browser extension allows you to generate a QR Code from the URL of the acti
   - Open the extension manager `chrome://extensions/` and enable developer mode,
   - Click "Load unpacked extension" and navigate to the unzipped folder.
 - Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/c8feeacd-090d-425c-88c9-d8f95ed9121d) in the toolbar to begin.
+
+This extensions uses the [qr-code-styling](https://www.npmjs.com/package/qr-code-styling) library.
