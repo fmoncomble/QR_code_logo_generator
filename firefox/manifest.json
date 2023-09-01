@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "QR Code with Logo Generator",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "downloads",
+        "<all_urls>"
+    ],
+    "icons": {
+    	"48": "icons/icon-48.png",
+    	"96": "icons/icon-96.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon-32.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "icons": {
+        "48": "icons/icon.png"
+    }
+}

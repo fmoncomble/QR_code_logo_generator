@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" type="text/css" href="qr_code.css">
+    <script src="qr_code.js"></script>
+	<script type="text/javascript" src="node_modules/qr-code-styling/lib/qr-code-styling.js"></script>
+	<script type="text/javascript" src="node_modules/qrcode-generator/qrcode.js"></script>
+</head>
+
+<body>
+		<div id="options">
+		Dot colour:
+		<select id="fgColor">
+			<option value="black">Black</option>
+			<option value="blue">Blue</option>
+			<option value="red">Red</option>
+			<option value="white">White</option>
+		</select>
+		<br><br>
+		Background colour:
+		<select id="bgColor">
+			<option value="white">White</option>
+			<option value="blue">Blue</option>
+			<option value="red">Red</option>
+			<option value="black">Black</option>
+		</select>
+		</div>
+	<br><br>
+	<label for="imageUpload" id="customFileUpload">Add logo from file (optional)</label><br><br>
+	<input type="file" id="imageUpload" accept="image/*">
+	<br>
+	<div id="fileName"></div><br>
+	<button id="generateButton">Generate</button>	
+    <div id="qr-code-container">
+    </div>
+</body>
+</html>
