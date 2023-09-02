@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "QR Code with Logo Generator",
-    "version": "2.0",
+    "version": "2.1",
     "permissions": [
         "activeTab",
         "storage",
