@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>QR Code Generator</title>
     <link rel="stylesheet" type="text/css" href="popup.css">
     <script src="popup.js"></script>
+    <script type="text/javascript" src="node_modules/qr-code-styling/lib/qr-code-styling.js"></script>
+    <script type="text/javascript" src="node_modules/qrcode-generator/qrcode.js"></script>
 </head>
+
 <body>
-	<div id:"content-container">
+	<div id="content-container">
 		<h2>Generate QR Code from current tab</h2>
-		<button id="openQrCodeButton">Open QR Code Generator</button>
+		<br><br>
+		<div id="qr-code-container">
+	    </div>
+	    <br><br>
+		<button id="downloadButton">Download as PNG</button>
+		<br><br>
+		<button id="customiseButton">Customise…</button>
 	</div>
 </body>
 </html>

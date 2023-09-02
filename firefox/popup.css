@@ -1,16 +1,15 @@
 html {
 	border: none;
 	border-radius: 10px;
-	width: 220px;
+	width: 236px;
 }
 
 body {
-	justify-content: center;
     background-color: white;
     text-align: center;
     font-family: system-ui, sans-serif;
-    width: 200px;
-    height: 200px;
+    width: 236px;
+    height: 500px;
     padding: 10px;
 }
 
@@ -34,6 +33,15 @@ button:hover {
 
 button:active {
 	border: 2px solid;
+}
+
+#qr-code-container {
+	display: flex;
+	justify-self: center;
+	margin-top: 20px;
+	margin-left: 28px;
+	width: 180px;
+	height: 180px;
 }
 
 
