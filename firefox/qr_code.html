@@ -14,7 +14,7 @@
     <div id="wrapper">
       <div id="options-container">
         <p style="font-weight:bold; font-size:large; color:#000000">Customise your QR Code</p>
-        <div class="container">
+        <div id="dot-options" class="container">
           <p style="text-align:left">Dots:</p>
           <div class="colorPickerContainer">
             <div class="colorPicker">
@@ -34,7 +34,7 @@
             </select>
           </div>
         </div><br>
-        <div class="container">
+        <div id="corner-square-options" class="container">
           <p style="text-align:left">Corner Squares:</p>
           <div class="colorPickerContainer">
             <div class="colorPicker">
@@ -49,8 +49,8 @@
               <option value='dot'>Dot</option>
               <option value='extra-rounded'>Extra Rounded</option>
             </select>
-          </div>
-          <div class="container">
+          </div></div>
+          <div id="corner-dot-options" class="container">
             <p style="text-align:left">Corner Dots:</p>
             <div class="colorPickerContainer">
               <div class="colorPicker">
@@ -64,9 +64,9 @@
                 <option value='square'>&emsp;Square&emsp;</option>
                 <option value='dot'>Dot</option>
               </select>
-            </div>
+            </div></div>
             <br><br>
-            <div class="colorPickerContainer">
+            <div id="background-color-picker" class="colorPickerContainer">
               <div class="colorPicker">
                 <label for="bgColorPicker" style="color:#DB4437">Background Colour:&emsp;</label>
                 <input type="color" id="bgColor" name="bgColorPicker" value="#ffffff">
