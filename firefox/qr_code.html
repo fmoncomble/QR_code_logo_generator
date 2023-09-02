@@ -1,38 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
+    <meta charset="UTF-8">
     <title>QR Code Generator</title>
     <link rel="stylesheet" type="text/css" href="qr_code.css">
     <script src="qr_code.js"></script>
-	<script type="text/javascript" src="node_modules/qr-code-styling/lib/qr-code-styling.js"></script>
-	<script type="text/javascript" src="node_modules/qrcode-generator/qrcode.js"></script>
-</head>
+    <script type="text/javascript" src="node_modules/qr-code-styling/lib/qr-code-styling.js"></script>
+    <script type="text/javascript" src="node_modules/qrcode-generator/qrcode.js"></script>
+  </head>
 
-<body>
-		<div id="options">
-		Dot colour:
-		<select id="fgColor">
-			<option value="black">Black</option>
-			<option value="blue">Blue</option>
-			<option value="red">Red</option>
-			<option value="white">White</option>
-		</select>
-		<br><br>
-		Background colour:
-		<select id="bgColor">
-			<option value="white">White</option>
-			<option value="blue">Blue</option>
-			<option value="red">Red</option>
-			<option value="black">Black</option>
-		</select>
-		</div>
-	<br><br>
-	<label for="imageUpload" id="customFileUpload">Add logo from file (optional)</label><br><br>
-	<input type="file" id="imageUpload" accept="image/*">
-	<br>
-	<div id="fileName"></div><br>
-	<button id="generateButton">Generate</button>	
-    <div id="qr-code-container">
-    </div>
-</body>
+  <body>
+    <div id="wrapper">
+      <div id="options-container">
+        <p style="font-weight:bold; font-size:large; color:#000000">Customise your QR Code</p>
+        <div class="container">
+          <p style="text-align:left">Dots:</p>
+          <div class="colorPickerContainer">
+            <div class="colorPicker">
+              <label for="dotColorPicker">Colour:&emsp;</label>
+              <input type="color" id="dotColor" name="dotColorPicker" value="#000000">
+            </div>
+          </div><br>
+          <div class="typeContainer">
+            Type:&emsp;
+            <select id="dotType">
+              <option value='square'>Square</option>
+              <option value='rounded'>Rounded</option>
+              <option value='dots'>Dots</option>
+              <option value='classy'>Classy</option>
+              <option value='classy-rounded'>Classy Rounded</option>
+              <option value='extra-rounded'>Extra Rounded</option>
+            </select>
+          </div>
+        </div><br>
+        <div class="container">
+          <p style="text-align:left">Corner Squares:</p>
+          <div class="colorPickerContainer">
+            <div class="colorPicker">
+              <label for="cornersSquareColorPicker">Colour:&emsp;</label>
+              <input type="color" id="cornersSquareColor" name="cornersSquareColorPicker" value="#000000">
+            </div>
+          </div><br>
+          <div class="typeContainer">
+            Type:&emsp;
+            <select id="cornersSquareType">
+              <option value='square'>Square</option>
+              <option value='dot'>Dot</option>
+              <option value='extra-rounded'>Extra Rounded</option>
+            </select>
+          </div>
+          <div class="container">
+            <p style="text-align:left">Corner Dots:</p>
+            <div class="colorPickerContainer">
+              <div class="colorPicker">
+                <label for="cornersDotColorPicker">Colour:&emsp;</label>
+                <input type="color" id="cornersDotColor" name="cornersDotColorPicker" value="#000000">
+              </div>
+            </div><br>
+            <div class="typeContainer">
+              Type:&emsp;
+              <select id="cornersDotType">
+                <option value='square'>&emsp;Square&emsp;</option>
+                <option value='dot'>Dot</option>
+              </select>
+            </div>
+            <br><br>
+            <div class="colorPickerContainer">
+              <div class="colorPicker">
+                <label for="bgColorPicker" style="color:#DB4437">Background Colour:&emsp;</label>
+                <input type="color" id="bgColor" name="bgColorPicker" value="#ffffff">
+              </div>
+            </div>
+            <br><br>
+            <div id="loadLogoContainer" style="display:block">
+              <label for="imageUpload" id="customFileUpload">Add logo from file (optional)</label><br><br>
+              <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div id="removeButtonContainer" style="display:none">
+              <button id="removeLogoButton">Remove logo</button>
+            </div><br>
+            <div id="fileName" style="color:#4285F4"></div><br>
+          </div>
+
+          <div id="generated-qr-code">
+            <div id="qr-code-container"></div>
+            <br><br>
+            <select id="chooseFormat">
+              <option value='png'>PNG</option>
+              <option value='svg'>SVG</option>
+            </select>
+            <button id="downloadButton">Download</button>
+          </div>
+        </div>
+      </div>
+  </body>
+
 </html>
