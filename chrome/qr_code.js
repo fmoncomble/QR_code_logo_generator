@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", async function() {
       } else {
         console.error('Favicon not found');
         faviconError = document.createElement('div');
-        faviconError.textContent = 'Tab icon not found';
+        faviconError.style.color = '#ffa500';
+        faviconError.textContent = '⚠️ Tab icon not found';
         addFaviconButton.after(faviconError);
       }
       console.log('Final FaviconUrl=', newFaviconUrl);
