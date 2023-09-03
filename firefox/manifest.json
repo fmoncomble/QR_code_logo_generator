@@ -1,7 +1,9 @@
 {
     "manifest_version": 2,
     "name": "QR Code with Logo Generator",
-    "version": "2.1",
+    "version": "2.2",
+    "description": "Create and customise a QR Code for the current tab or window"
+    "homepage_url": "https://github.com/fmoncomble/QR_code_logo_generator"
     "permissions": [
         "activeTab",
         "storage",
@@ -20,4 +22,12 @@
         "scripts": ["background.js"],
         "persistent": false
     }
+
+	"browser_specific_settings": {
+    	"gecko": {
+	      "id": "{7226f903-dee0-401c-bc94-042d645cb3dd}",
+    	  "update_url": "https://github.com/fmoncomble/QR_code_logo_generator/releases/latest/download/update_manifest.json"
+	    }
+	}
+	
 }
