@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       removeButtonContainer.style.display = 'block'; // Show the remove logo button
       loadLogoContainer.style.display = 'none'; // Hide the add logo button
       addFaviconContainer.style.display = 'block'; // Show add favicon button
-      removeFaviconContainer.style.display = 'none'; // Hide remove favicon button
-      document.getElementById('faviconName').textContent = ''; // Hide displayed favicon URL
+      removeFaviconContainer.style.display = 'none';
     } else {
       selectedFileNameElement.textContent = ''; // Clear the file name if no file is selected
     }
@@ -95,7 +94,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         loadLogoContainer.style.display = 'block'; // Show the add logo button			
       } else {
         console.error('Favicon not found');
-        faviconName.textContent = 'Tab icon not found';
+        faviconError = document.createElement('div');
+        faviconError.textContent = 'Tab icon not found';
+        addFaviconButton.after(faviconError);
       }
       console.log('Final FaviconUrl=', newFaviconUrl);
       updateQRCode(newFaviconUrl);
