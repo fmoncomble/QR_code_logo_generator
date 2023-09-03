@@ -1,0 +1,24 @@
+{
+	"addons": {
+		"{7226f903-dee0-401c-bc94-042d645cb3dd}": {
+			"updates": [
+				{
+					"version": "1.0",
+					"update_link": "https://github.com/fmoncomble/QR_code_logo_generator/releases/download/v1.0/QRLogoCreator_ff.xpi"
+				},
+				{
+					"version": "2.0",
+					"update_link": "https://github.com/fmoncomble/QR_code_logo_generator/releases/download/v2.0/QRLogoCreator_ff.xpi"
+				},
+				{
+					"version": "2.1",
+					"update_link": "https://github.com/fmoncomble/QR_code_logo_generator/releases/download/v2.1/QRLogoCreator_ff.xpi"
+				},
+				{
+					"version": "2.2",
+					"update_link": "https://github.com/fmoncomble/QR_code_logo_generator/releases/download/v2.2/QRLogoCreator_ff.xpi"
+				}
+			]
+		}
+	}
+}

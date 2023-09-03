@@ -12,11 +12,12 @@ body {
 }
 
 #wrapper {
-	display: flex;}
+  display: flex;
+}
 
 #options-container {
   width: 400px;
-  height: 600px;
+  height: 800px;
   background-color: #F0F0F0;
   padding: 20px;
 }
@@ -28,6 +29,7 @@ body {
 
 .container {
   color: #DB4437;
+  font-weight: bold;
 }
 
 select,
