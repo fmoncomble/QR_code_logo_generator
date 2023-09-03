@@ -17,6 +17,10 @@
 				{
 					"version": "2.2",
 					"update_link": "https://github.com/fmoncomble/QR_code_logo_generator/releases/download/v2.2/QRLogoCreator_ff.xpi"
+				},
+				{
+					"version": "2.3",
+					"update_link": "https://github.com/fmoncomble/QR_code_logo_generator/releases/download/v2.3/QRLogoCreator_ff.xpi"
 				}
 			]
 		}
