@@ -23,4 +23,4 @@ This browser extension allows you to generate a QR Code from the URL of the acti
 
 
 ##
-This extension uses the [qr-code-styling](https://www.npmjs.com/package/qr-code-styling) library.
+This extension uses the [qr-code-styling](https://www.npmjs.com/package/qr-code-styling) library ([licence](https://github.com/kozakdenys/qr-code-styling/blob/master/LICENSE)).
