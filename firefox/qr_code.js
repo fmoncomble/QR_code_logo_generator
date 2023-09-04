@@ -86,21 +86,28 @@ document.addEventListener("DOMContentLoaded", async function() {
           newFaviconUrl = domain + '/' + intFaviconUrl3;
           console.log('newFaviconUrl=', newFaviconUrl);
         }
-        addFaviconContainer.style.display = 'none';
-        removeFaviconContainer.style.display = 'block';
-        imageUploadInput.value = ""; // Clear the selected file in the input
-        document.getElementById("fileName").textContent = ""; // Clear the displayed file name
-        removeButtonContainer.style.display = 'none'; // Hide the remove logo button
-        loadLogoContainer.style.display = 'block'; // Show the add logo button			
+        const imgResponse = await fetch(newFaviconUrl);
+        if (!imgResponse.ok) {
+          console.error('Could not load favicon');
+          addFaviconButton.style.color = '#ffa500';
+          addFaviconButton.style.backgroundColor = 'rgba(255, 165, 0, .04)';
+          addFaviconButton.textContent = '⚠️ Cannot load tab icon';
+        } else {
+          addFaviconContainer.style.display = 'none';
+          removeFaviconContainer.style.display = 'block';
+          imageUploadInput.value = ""; // Clear the selected file in the input
+          document.getElementById("fileName").textContent = ""; // Clear the displayed file name
+          removeButtonContainer.style.display = 'none'; // Hide the remove logo button
+          loadLogoContainer.style.display = 'block'; // Show the add logo button
+          console.log('Final FaviconUrl=', newFaviconUrl);
+          updateQRCode(newFaviconUrl);
+        }
       } else {
         console.error('Favicon not found');
-        faviconError = document.createElement('div');
-        faviconError.style.color = '#ffa500';
-        faviconError.textContent = '⚠️ Tab icon not found';
-        addFaviconButton.after(faviconError);
+        addFaviconButton.style.color = '#ffa500';
+        addFaviconButton.style.backgroundColor = 'rgba(255, 165, 0, .04)';
+        addFaviconButton.textContent = '⚠️ Tab icon not found';
       }
-      console.log('Final FaviconUrl=', newFaviconUrl);
-      updateQRCode(newFaviconUrl);
     } catch (error) {
       console.error('Error fetching favicon:', error);
     }
