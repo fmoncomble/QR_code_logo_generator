@@ -1,4 +1,3 @@
-![icon-48](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/1b64639a-ac9f-4b03-afc8-202ec1149264)
 # Generate a QR code with a logo
 
 This browser extension allows you to generate a QR Code from the URL of the active tab or window, with an optional logo at the centre.
