@@ -4,14 +4,14 @@ This browser extension allows you to generate a QR Code from the URL of the acti
 
 ## Firefox
 - [Download and install the latest version](https://github.com/fmoncomble/QR_code_logo_generator/releases/latest/download/QRLogoCreator_ff.xpi).
-- Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/c8feeacd-090d-425c-88c9-d8f95ed9121d) in the toolbar to begin.
+- Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/cf03042f-904a-4e85-94fb-e3c95d317f37) in the toolbar to begin.
 
 ## Chrome/Edge
 - [Download the latest .zip archive](https://github.com/fmoncomble/QR_code_logo_generator/releases/latest/download/QRLogoCreator_chrome.zip).
   - Unzip the archive,
   - Open the extension manager (`chrome://extensions/` or `edge://extensions/`) and enable developer mode,
   - Click "Load unpacked extension" and navigate to the unzipped folder.
-- Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/c8feeacd-090d-425c-88c9-d8f95ed9121d) in the toolbar to begin.
+- Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/cf03042f-904a-4e85-94fb-e3c95d317f37) in the toolbar to begin.
 
 ## Screenshots
 ![Screenshot 2023-09-04 at 07 48 30](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/f3ce1c48-fbd9-4ff6-a081-1b9fff8654ba)
