@@ -8,9 +8,6 @@
         "activeTab",
         "storage",
         "downloads"],
-    "host_permissions": [
-        "<all_urls>"
-    ],
     "icons": {
     	"48": "icons/icon-48.png",
     	"96": "icons/icon-96.png"
