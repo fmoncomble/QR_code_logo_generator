@@ -6,7 +6,7 @@ This browser extension allows you to generate and customise a QR Code from the U
 The extension does not communicate with any third-party websites or services.
 
 ## Firefox
-- [Download and install the latest version](https://github.com/fmoncomble/QR_code_logo_generator/releases/latest/download/QRLogoCreator_ff.xpi).
+[![Download and install the latest version](https://user-images.githubusercontent.com/59739627/265761868-54227cf0-78af-426c-962f-43bc233e37be.png)](https://github.com/fmoncomble/QR_code_logo_generator/releases/latest/download/QRLogoCreator_ff.xpi).
 - Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/6089d618-76c1-4fcb-b880-0ac7baa066d6)
  in the toolbar to begin.
 
