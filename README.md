@@ -3,6 +3,7 @@
 # Generate a QR code with a logo
 
 This browser extension allows you to generate and customise a QR Code from the URL of the active tab or window, with an optional logo at the centre.
+The extension does not communicate with any third-party websites or services.
 
 ## Firefox
 - [Download and install the latest version](https://github.com/fmoncomble/QR_code_logo_generator/releases/latest/download/QRLogoCreator_ff.xpi).
