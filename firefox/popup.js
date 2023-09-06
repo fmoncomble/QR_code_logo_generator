@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
           console.error('URL not defined');
           return;
         } else {
-          const qrCodePageUrl = browser.runtime.getURL("qr_code.html") + "?data=" + encodeURIComponent(url);
+          let qrCodePageDomain = browser.i18n.getMessage("qrCodePageDomain");
+          const qrCodePageUrl = browser.runtime.getURL(encodeURIComponent(qrCodePageDomain) + "qr_code.html") + "?data=" + encodeURIComponent(url);
           browser.tabs.create({
             url: qrCodePageUrl
           });

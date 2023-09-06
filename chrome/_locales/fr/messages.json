@@ -1,0 +1,37 @@
+{
+	
+	"popupHtml": {
+		"message": "html/fr/popup.html"
+	},
+	
+	"qrCodePageDomain": {
+		"message": "html/fr/"
+	},
+	
+	"extName": {
+		"message": "Générateur de QR Code avec logo",
+		"description": "Nom de l'extension"
+	},
+	
+	"description": {
+		"message": "Créez et personnalisez un QR Code pour l'onglet ou la fenêtre active",
+		"description": "Description de l'extension"
+	},
+	
+	"noFetch": {
+		"message": "⚠️ Accès à l'icône refusé"
+	},
+	
+	"noLoad": {
+		"message": "⚠️ Impossible de charger l'icône"
+	},
+	
+	"noFound": {
+		"message": "⚠️ Icône introuvable"
+	},
+	
+	"invalidUrlAlert": {
+		"message": "Merci d'entrer une URL valide."
+	}
+
+}

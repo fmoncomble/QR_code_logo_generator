@@ -1,17 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "QR Code with Logo Generator",
-    "version": "2.4.1",
-    "description": "Create and customise a QR Code for the current tab or window",
+    "name": "__MSG_extName__",
+    "version": "2.5",
+    "description": "__MSG_description__",
+    "default_locale": "en",
     "homepage_url": "https://github.com/fmoncomble/QR_code_logo_generator",
     "permissions": [
-        "activeTab"],
+        "activeTab"
+    ],
     "icons": {
     	"48": "icons/icon-48.png",
     	"96": "icons/icon-96.png"
     },
     "action": {
-        "default_popup": "popup.html",
         "default_icon": "icons/icon-32.png"
     },
     "background": {

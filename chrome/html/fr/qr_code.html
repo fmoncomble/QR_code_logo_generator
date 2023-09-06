@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Personnalisation du QR Code</title>
+    <link rel="stylesheet" type="text/css" href="../../qr_code.css">
+    <script src="../../qr_code.js"></script>
+    <script type="text/javascript" src="../../node_modules/qr-code-styling/lib/qr-code-styling.js"></script>
+    <script type="text/javascript" src="../../node_modules/qrcode-generator/qrcode.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="options-container">
+        <p style="font-weight:bold; font-size:x-large; color:#000000">Personnalisez votre QR Code</p>
+        <div id="displayStylingOptions">
+          <button id="displayStylingOptionsButton" class="subsection" style="display:none">Options de style</button>
+          <button id="hideStylingOptionsButton" class="subsection" style="display:block">Options de style</button>
+        </div>
+        <div id="stylingOptions">
+          <div id="dot-options" class="container">
+            <p style="text-align:left">Points:</p>
+            <div class="colorPickerContainer">
+              <div class="colorPicker">
+                <label for="dotColor">Couleur:&emsp;</label>
+                <input type="color" id="dotColor" name="dotColorPicker" value="#000000">
+              </div>
+            </div><br>
+            <div class="typeContainer">
+              Type:&emsp;
+              <select id="dotType">
+                <option value='square'>Carré</option>
+                <option value='rounded'>Rond</option>
+                <option value='dots'>Points</option>
+                <option value='classy'>Élégant</option>
+                <option value='classy-rounded'>Élégant rond</option>
+                <option value='extra-rounded'>Extra rond</option>
+              </select>
+            </div>
+          </div>
+          <div id="corner-square-options" class="container">
+            <p style="text-align:left">Carrés:</p>
+            <div class="colorPickerContainer">
+              <div class="colorPicker">
+                <label for="cornersSquareColor">Couleur:&emsp;</label>
+                <input type="color" id="cornersSquareColor" name="cornersSquareColorPicker" value="#000000">
+              </div>
+            </div><br>
+            <div class="typeContainer">
+              Type:&emsp;
+              <select id="cornersSquareType">
+                <option value=''>Idem points</option>
+                <option value='square'>Carré</option>
+                <option value='dot'>Point</option>
+                <option value='extra-rounded'>Extra rond</option>
+              </select>
+            </div>
+          </div>
+          <div id="corner-dot-options" class="container">
+            <p style="text-align:left">Coins:</p>
+            <div class="colorPickerContainer">
+              <div class="colorPicker">
+                <label for="cornersDotColor">Couleur:&emsp;</label>
+                <input type="color" id="cornersDotColor" name="cornersDotColorPicker" value="#000000">
+              </div>
+            </div><br>
+            <div class="typeContainer">
+              Type:&emsp;
+              <select id="cornersDotType">
+                <option value=''>Idem points</option>
+                <option value='square'>Carré</option>
+                <option value='dot'>Point</option>
+              </select>
+            </div>
+          </div>
+          <div id="background-options" class="container">
+            <p style="text-align:left">Arrière-plan:</p>
+            <div id="background-color-picker" class="colorPickerContainer">
+              <div class="colorPicker">
+                <label for="bgColor">Couleur:&emsp;</label>
+                <input type="color" id="bgColor" name="bgColorPicker" value="#ffffff">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div id="logo-options">
+          <button id="displayLogoOptionsButton" class="subsection" style="display:block">Options de logo central</button>
+          <button id="hideLogoOptionsButton" class="subsection" style="display:none">Options de logo central</button>
+          <br>
+          <div id="logoSubsection" style="display:none">
+            <div id="addFaviconContainer" style="display:block">
+              <button id="addFaviconButton">&emsp;Ajouter icône d'onglet&emsp;</button>
+              <div id="spinner" class="spinner" style="display:none"></div>
+            </div><br>
+            <div id="loadLogoContainer" style="display:block">
+              <label for="imageUpload" id="customFileUpload">Ajouter logo depuis fichier</label>
+              <input type="file" id="imageUpload" accept="image/*">
+            </div><br>
+            <div id="loadLogoUrlContainer" style="display:block">
+              <span style="color:#4285F4; font-size:small">Ajouter logo depuis URL:&emsp;</span>
+              <input type="url" placeholder="Entrer ou coller une URL" id="imageUrlLoader" name="imageUrlLoader" />
+              <button id="loadLogoUrlButton" style="display:inline">&emsp;Charger&emsp;</button>
+              <div id="spinner2" class="spinner" style="display:none"></div>
+            </div><br>
+            <div id="removeButtonContainer" style="color:#DB4437; display:none">
+              <button id="removeLogoButton" style="color:#DB4437">&emsp;Effacer logo&emsp;</button>
+            </div><br>
+          </div>
+        </div>
+      </div>
+
+      <div id="generated-qr-code">
+        <div id="qr-code-container"></div>
+        <br><br>
+        <select id="chooseFormat">
+          <option value='png'>PNG</option>
+          <option value='jpeg'>JPG</option>
+          <option value='svg'>SVG</option>
+          <option value='webp'>WEBP</option>
+        </select>
+        <button id="downloadButton">Télécharger</button>
+      </div>
+    </div>
+    </div>
+  </body>
+
+</html>

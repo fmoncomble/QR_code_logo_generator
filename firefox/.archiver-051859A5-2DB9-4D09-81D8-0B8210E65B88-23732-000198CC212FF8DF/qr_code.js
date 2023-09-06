@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", async function() {
   const removeLogoButton = document.getElementById("removeLogoButton");
 
   // Localisation elements
-  let noFetch = chrome.i18n.getMessage("noFetch");
-  let noLoad = chrome.i18n.getMessage("noLoad");
-  let noFound = chrome.i18n.getMessage("noFound");
+  let noFetch = browser.i18n.getMessage("noFetch");
+  let noLoad = browser.i18n.getMessage("noLoad");
+  let noFound = browser.i18n.getMessage("noFound");
 
   // Load default QR Code
   let qrCode = new QRCodeStyling({
@@ -111,16 +111,31 @@ document.addEventListener("DOMContentLoaded", async function() {
   async function getFaviconUrl() {
     spinner.style.display = 'inline-block'; // Show loading spinner  
     const parser = new DOMParser();
-    const response = await fetch(qrData);
-    if (!response.ok) {
-      throw new Error("Failed to fetch page");
-    }
-    const html = await response.text();
-    const page = parser.parseFromString(html, 'text/html');
-    const head = page.querySelector('head');
-    const links = head.querySelectorAll('link[rel~="icon"]');
-    return [...links].find(d => d.href.includes('favicon'));
-  }
+    try {
+		const response = await fetch(qrData);
+		if (!response.ok) {
+		  throw new Error("Failed to fetch page");
+		}
+		const html = await response.text();
+		const page = parser.parseFromString(html, 'text/html');
+		const head = page.querySelector('head');
+		const links = head.querySelectorAll('link[rel~="icon"]');
+		return [...links].find(d => d.href.includes('favicon'));
+	  } catch (error) {
+		// Handle CORS issue
+		if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
+			throw new Error('CORS issue encountered');
+			spinner.style.display = 'none'; // Hide loading spinner
+			console.error("Error fetching favicon:", error);
+			addFaviconButton.style.color = '#ffa500';
+			addFaviconButton.style.borderColor = '#ffa500';
+			addFaviconButton.style.backgroundColor = '#ffedcc';
+			addFaviconButton.textContent = noFetch;
+		  } else {
+			throw error;
+		  }
+		}
+	}
 
   async function buildLogoUrl() {
     try {
@@ -164,12 +179,17 @@ document.addEventListener("DOMContentLoaded", async function() {
         addFaviconButton.textContent = noFound;
       }
     } catch (error) {
-      spinner.style.display = 'none'; // Hide loading spinner
-      console.error('Error fetching favicon:', error);
-      addFaviconButton.style.color = '#ffa500';
-      addFaviconButton.style.borderColor = '#ffa500';
-      addFaviconButton.style.backgroundColor = '#ffedcc';
-      addFaviconButton.textContent = NoFetch;
+    	if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
+    		throw new Error('CORS issue encountered');
+			  spinner.style.display = 'none'; // Hide loading spinner
+			  console.error('Error fetching favicon:', error);
+			  addFaviconButton.style.color = '#ffa500';
+			  addFaviconButton.style.borderColor = '#ffa500';
+			  addFaviconButton.style.backgroundColor = '#ffedcc';
+			  addFaviconButton.textContent = NoFetch;
+		} else {
+			throw error;
+		}
     }
   };
 
@@ -205,7 +225,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     let logoUrl;
     logoUrl = imageUrlLoader.value;
     if (!isValidUrl(logoUrl)) {
-    	let invalidUrlAlert = chrome.i18n.getMessage("invalidUrlAlert");
+    	let invalidUrlAlert = browser.i18n.getMessage("invalidUrlAlert");
     	alert(invalidUrlAlert);
     	spinner2.style.display = 'none';
     	return
