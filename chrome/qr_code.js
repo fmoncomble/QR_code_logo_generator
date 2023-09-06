@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       addFaviconButton.style.color = '#ffa500';
       addFaviconButton.style.borderColor = '#ffa500';
       addFaviconButton.style.backgroundColor = '#ffedcc';
-      addFaviconButton.textContent = NoFetch;
+      addFaviconButton.textContent = noFetch;
     }
   };
 
