@@ -1,3 +1,9 @@
+chrome.runtime.onInstalled.addListener(tab => {
+	let popupHtml = chrome.i18n.getMessage("popupHtml");
+	
+	chrome.action.setPopup({popup: popupHtml});
+});
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (message.action === "generateUrl") {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {

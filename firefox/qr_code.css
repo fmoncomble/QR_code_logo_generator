@@ -45,6 +45,7 @@ body {
   color: #4285F4;
   text-indent: 8em;
   text-align: left;
+  font-size: small
 }
 
 select,
@@ -144,4 +145,36 @@ label {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+button#displayLogoOptionsButton,
+button#hideLogoOptionsButton,
+button#displayStylingOptionsButton,
+button#hideStylingOptionsButton {
+	border: none;
+	color: #DB4437;
+	background-color: #d9d9d9;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: background-color 0.4s;
+}
+
+button#displayLogoOptionsButton:hover,
+button#hideLogoOptionsButton:hover,
+button#displayStylingOptionsButton:hover,
+button#hideStylingOptionsButton:hover {
+	background-color: #cccccc;
+}
+
+button#displayLogoOptionsButton:after,
+button#displayStylingOptionsButton:after {
+	content: "➕";
+	float: right;
+}
+
+button#hideLogoOptionsButton:after,
+button#hideStylingOptionsButton:after {
+	content: "➖";
+	float: right;
 }

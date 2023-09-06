@@ -18,11 +18,16 @@ The extension does not communicate with any third-party websites or services.
 - Click the icon ![icon-32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/6089d618-76c1-4fcb-b880-0ac7baa066d6) in the toolbar to begin.
 
 ## Screenshots
-![Screenshot 2023-09-04 at 07 48 30](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/f3ce1c48-fbd9-4ff6-a081-1b9fff8654ba)
-![Screenshot 2023-09-04 at 07 49 32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/bc13f4c4-fd32-4b79-996b-ce9e1479449d)
-![Screenshot 2023-09-04 at 07 49 56](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/7a8ecfb7-9c23-4e36-b407-f82f646490c4)
-![Screenshot 2023-09-04 at 08 02 32](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/f4ef99b2-5b49-4ffb-9a9d-1a8e654020bd)
-![Screenshot 2023-09-04 at 08 03 45](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/2cabbb1f-a384-463d-bd41-715bc5ea7e5b)
+![Screenshot 2023-09-06 at 18 42 07](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/475d7ec5-58d8-49ca-863b-e7cc3e9a7d9c)
+- Customisation interface:
+![Screenshot 2023-09-06 at 18 43 07](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/b7784b6a-4c91-472b-af23-f51ba1dd54bd)
+- Add tab icon:
+![Screenshot 2023-09-06 at 18 43 52](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/bd830066-5405-4a1d-af7d-81356cc01cb7)
+- Load logo from file:
+![Screenshot 2023-09-06 at 18 45 27](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/7644c522-8b65-46e1-947b-c755fc2a177c)
+- Load logo from URL:
+![Screenshot 2023-09-06 at 18 48 11](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/d436dda5-83b2-4520-a42e-0f6b4703aab2)
+
 
 
 ##
