@@ -17,9 +17,20 @@ body {
 
 #options-container {
   width: 500px;
-  height: 900px;
+  height: auto;
   background-color: #F0F0F0;
   padding: 20px;
+  border-radius: 20px;
+}
+
+legend {
+	 font-weight: bold;
+	 font-size: x-large;
+	 color:#000000;
+	 background-color: #F0F0F0;
+	 border: 1px solid;
+	 border-radius: 10px;
+	 padding: 10px;
 }
 
 #generated-qr-code {
