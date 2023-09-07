@@ -211,15 +211,23 @@ document.addEventListener("DOMContentLoaded", async function() {
     	return
     } else if (logoUrl) {
       removeButtonContainer.style.display = 'block'; // Show remove logo button
-      spinner2.style.display = 'none'; // Hide loading spinner
-      updateQRCode(logoUrl); // Update QR Code with logo from URL
+      const img = new Image();
+      img.src = logoUrl;
+      img.onload = function() {
+      	spinner2.style.display = 'none'; // Hide loading spinner
+      	updateQRCode(logoUrl); // Update QR Code with logo from URL
+      };
+      img.onerror = function() {
+      	spinner2.style.display = 'none' // Hide loading spinner
+      	alert('Error: Unable to load logo from URL');
+      };
     }
   });
   
   function isValidUrl(url) {
   	const urlPattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,6}([-a-zA-Z0-9@:%_\+.~#?&//=]*)?$/i;
   	return urlPattern.test(url);
-  }
+  };
 
   // Clear logo
   removeLogoButton.addEventListener("click", function() {
