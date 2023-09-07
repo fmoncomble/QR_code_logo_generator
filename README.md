@@ -27,6 +27,9 @@ The extension does not communicate with any third-party websites or services.
 ![Screenshot 2023-09-06 at 18 45 27](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/7644c522-8b65-46e1-947b-c755fc2a177c)
 - Load logo from URL:
 ![Screenshot 2023-09-06 at 18 48 11](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/d436dda5-83b2-4520-a42e-0f6b4703aab2)
+- French style:
+![Screenshot 2023-09-06 at 19 06 21](https://github.com/fmoncomble/QR_code_logo_generator/assets/59739627/ab3685f1-39d4-4c9e-9257-1d1182e62885)
+
 
 
 
